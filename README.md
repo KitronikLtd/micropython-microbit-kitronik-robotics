@@ -1,6 +1,9 @@
 # micropython-microbit-kitronik-robotics
 Example MicroPython (for BBC micro:bit) code for the Kitronik All-in-one Robotics Board ( www.kitronik.co.uk/5641 )
 
+## Note: 
+There are 2 python files in this repo. The one which is named: kitronik-reference-file-robotics-TOO-LARGE.py contains explanatory comments, which increase the file size. This makes it too large to run on a micro:bit. The other file (robotics.py) contains the same code, but without the large comments. This enables the file to function in the limited footprint available.
+
 ## Motors
 
 This package contains a function for driving standard motors forwards and backwards, with a speed setting of 0-100%:
