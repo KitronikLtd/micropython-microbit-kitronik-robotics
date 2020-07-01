@@ -155,11 +155,11 @@ class KitronikRoboticsBoard:
         stepCounter = 0
 
         if self.stepInit is False:
-            self.stepStage = 1
+           self.stepStage = 1
             self.stepInit = True
 
         while stepCounter < steps:
-            if stepStage == 1 or stepStage == 3:
+            if self.stepStage == 1 or self.stepStage == 3:
                 if stepper == "Stepper1":
                     currentMotor = 1
                 else:
@@ -170,7 +170,7 @@ class KitronikRoboticsBoard:
                 else:
                     currentMotor = 4
 
-            if stepStage == 1 or stepStage == 4:
+            if self.stepStage == 1 or self.stepStage == 4:
                  currentDirection = "forward"
             else:
                 currentDirection = "reverse"
@@ -179,15 +179,15 @@ class KitronikRoboticsBoard:
             sleep(20)
 
             if direction == "forward":
-                if stepStage == 4: 
-                    stepStage = 1
+                if self.stepStage == 4: 
+                    self.stepStage = 1
                 else:
-                    stepStage += 1
+                    self.stepStage += 1
             elif direction == "reverse":
-                if stepStage == 1: 
-                    stepStage = 4
+                if self.stepStage == 1: 
+                    self.stepStage = 4
                 else:
-                    stepStage -= 1
+                    self.stepStage -= 1
             
             stepCounter += 1
       
