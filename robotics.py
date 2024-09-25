@@ -41,7 +41,7 @@ class KitronikRoboticsBoard:
     def __init__(self):
         buf = bytearray(2)
         buf[0] = self.PRESCALE_REG
-        buf[1] = 0x85 #50Hz
+        buf[1] = 0x7D #50Hz
         i2c.write(self.chipAddress, buf, False)
         
         for blockReg in range(0xFA, 0xFE, 1):
