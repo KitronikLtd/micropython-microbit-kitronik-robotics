@@ -41,7 +41,7 @@ class KitronikRoboticsBoard:
 
         #First set the prescaler to 50 hz
         buf[0] = self.PRESCALE_REG
-        buf[1] = 0x85 #50Hz
+        buf[1] = 0x7D #50Hz
         i2c.write(self.chipAddress, buf, False)
         #Block write via the all leds register to turn off all outputs
         
